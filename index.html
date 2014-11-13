@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>OKLab Leipzig - Streetmap Inputsettion vom 10.11.2014</title>
+        <meta charset="utf-8"/>
+
+        <!-- Wir nutzen direkt den Server von Leaflet um die CSS Dateien zu laden -->
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+        <!-- Wir nutzen direkt den Server von Picnic CSS um die CSS Dateien zu laden -->
+        <link href="http://picnicss.com/releases/v2.3.min.css" rel="stylesheet" type="text/css">
+
+        <!-- Einbinden unserer eigenen Style-Anweisungen um Text zu zentrieren und größe der Karte festzulegen -->
+        <link rel="stylesheet" href="../static/main.css" />
+    </head>
+
+    <body>
+
+        <h1>#OKLab Leipzig</h1>
+
+        <!-- 3 Knöpfe, welche die Kartenbilder austauschen. Bein Click, rufen sie die in der main.js definierte setMapTiles Funktion auf. -->
+        <button onclick="setMapTiles(normalTiles)">Normal</button>
+        <button onclick="setMapTiles(mapnikGreyscaleTiles)">Mapnik Greyscale</button>
+        <button onclick="setMapTiles(watercolorTiles)">Watercolor</button>
+
+        <!-- Ein orangener Knopf, welcher einen Marker auf der Position des OKLabs setzt. -->
+        <button class="warning" onclick="setMarkerOfOkLab()">OK Lab Leipzig</button>
+
+        <!-- Unsere Karte. Das ID Attribut wird benötigt um im JavaScript darauf zurgreifen zu können. -->
+        <div id="map"></div>
+
+        <!-- Wir nutzen direkt den Server von Leaflet um die JavaScript Dateien zu laden -->
+        <script
+            type="text/javascript"
+            src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+        <!-- Einbinden unserer eigenen JavaScript-Anweisungen -->
+        <script
+            type="text/javascript"
+            src="../static/main.js"></script>
+
+    </body>
+</html>
